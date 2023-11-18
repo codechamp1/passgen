@@ -1,0 +1,13 @@
+*.log
+*.pyc
+__pycache__
+
+.env
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+vercel.json
+.pytest_cache
+.pytest_cache/

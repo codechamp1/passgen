@@ -1,0 +1,5 @@
+manage-fastapi==1.1.1
+fastapi==0.104.1
+uvicorn==0.24.0.post1
+pytest==7.4.3
+httpx==0.25.1
