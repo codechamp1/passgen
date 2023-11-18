@@ -2,7 +2,8 @@ from fastapi import FastAPI, Depends, HTTPException
 from app.core.schema import PasswordConfig, PasswordGenerated, StrongnessGenerated
 from app.core.logic import generate_password, password_strongness
 
-app = FastAPI()
+app = FastAPI(docs_url=None,
+              redoc_url=None)
 
 
 @app.get("/passgen/generate")
