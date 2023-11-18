@@ -121,10 +121,18 @@ def test_password_check_moderate():
     assert response.status_code == 200
 
 
-def test_password_weak():
+def test_password_check_weak():
     test_password = "testPassword"
     response = client.get(
         f"passgen/check?password={test_password}")
 
     assert response.json()["strongness"] == Strongness.WEAK.value[0]
     assert response.status_code == 200
+
+
+def test_password_check_small_lengt():
+    test_password = "tst"
+    response = client.get(
+        f"passgen/check?password={test_password}")
+
+    assert response.status_code == 400
